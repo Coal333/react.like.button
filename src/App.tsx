@@ -10,6 +10,7 @@ function App() {
   const [Nolike, NosetLike] = useState (false);
   
   const like반전 = () => setLike((현재like) => !현재like);
+
   const Nolike반전 = () => NosetLike((현재Nolike) => !현재Nolike);
   
   let likeButton = <button onClick={like반전}>좋아요</button>;
@@ -17,16 +18,16 @@ function App() {
     likeButton =<button onClick={like반전}>좋아요 취소</button>;
   }
 
-  let NolikeButton = <button onClick={Nolike반전}>안좋아요</button>;
+  let NolikeButton = <button onClick={Nolike반전}>싫어요</button>;
   if (Nolike === true){
-    NolikeButton =<button onClick={Nolike반전}>안좋아요 취소</button>;
+    NolikeButton =<button onClick={Nolike반전}>싫어요 취소</button>;
   }
 
   return (
     <div>
       <h1>좋아요 버튼</h1>
       {likeButton}
-      <h1>안좋아요 버튼</h1>
+      <h1>싫어요 버튼</h1>
       {NolikeButton}
      </div>
   )
